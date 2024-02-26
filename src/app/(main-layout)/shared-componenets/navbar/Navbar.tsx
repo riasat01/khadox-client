@@ -29,6 +29,9 @@ const Navbar = () => {
             <Link href='/food'>Food</Link>
         </li>
         <li>
+            <Link href='/register-restaurant'>Resgister Restaurant</Link>
+        </li>
+        <li>
             <Link href='/about'>About</Link>
         </li>
     </>
