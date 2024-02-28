@@ -16,8 +16,8 @@ const Locations = async () => {
     return (
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 rounded-lg mx-8 md:mx-16 lg:mx-24 my-24">
             {
-                locationData?.map((location: LocationType) => <Link key={location?.id} href={`${baseUrl}/restaurants/${location?.id}`}><section className="card bg-base-100 shadow-xl image-full">
-                <figure><Image width={500} height={300} className="w-80 h-80" src={location?.image_url} alt="Image" /></figure>
+                locationData?.map((location: LocationType) => <Link key={location?.id} href={`${baseUrl}/restaurants/${location?.id}`}><section className="card bg-base-100 shadow-xl image-full h-full">
+                <figure><Image width={500} height={500} className="h-full w-full" src={location?.image_url} alt="Image" /></figure>
                 <section className="card-body">
                   <h2 className="card-title">{location?.name}</h2>
                   {/* <p>If a dog chews shoes whose shoes does he choose?</p>

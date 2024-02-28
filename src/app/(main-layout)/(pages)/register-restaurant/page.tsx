@@ -20,7 +20,7 @@ const RestaurantRegistrationPage = () => {
                 <input className="w-full p-2 rounded-xl bg-transparent border-2" type="text" name="photoURL" placeholder="Photo URL" id="" />
                 <input className="w-full p-2 rounded-xl bg-transparent border-2" type="email" name="email" placeholder="Restaurant Email" id="" />
                 <input className="w-full p-2 rounded-xl bg-transparent border-2" type="password" name="password" placeholder="Password" id="" />
-                <input className="w-full hover:m-1 p-2 text-white font-medium rounded-xl bg-gradient-to-tr from-blue-700 to-blue-900 hover:from-blue-900 hover:to-blue-950" type="button" value="Sign Up" />
+                <input className="w-full hover:m-1 p-2 text-white font-medium rounded-xl bg-gradient-to-tr from-blue-700 to-blue-900 hover:from-blue-900 hover:to-blue-950" type="button" value="Register" />
             </form>
         </div>
     );
