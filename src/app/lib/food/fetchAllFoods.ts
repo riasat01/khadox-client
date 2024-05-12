@@ -1,4 +1,6 @@
+import { baseUrl } from "@/app/_util/BaseURL";
+
 export async function fetchAllFoods (){
-    const res = await fetch('http://127.0.0.1:8000/management/api/food/')
+    const res = await fetch(`${baseUrl}/management/api/food/`);
     return res?.json();
 }

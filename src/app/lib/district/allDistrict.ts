@@ -1,4 +1,6 @@
+import { baseUrl } from "@/app/_util/BaseURL";
+
 export async function fetchAllDistricts() {
-    const res = await fetch('http://127.0.0.1:8000/management/api/district/');
+    const res = await fetch(`${baseUrl}/management/api/district/`);
     return res.json();
 }

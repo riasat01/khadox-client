@@ -8,6 +8,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'api.imgbb.com/1/upload',
+                port: '',
+                pathname: '/**',
+            },
         ],
     },
 };

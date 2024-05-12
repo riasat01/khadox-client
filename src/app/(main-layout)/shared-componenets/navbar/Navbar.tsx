@@ -6,14 +6,14 @@ const Navbar = () => {
         <li>
             <Link href='/'>Home</Link>
         </li>
-        <li className="md:hidden">
+        {/* <li className="md:hidden">
             <Link href='/category'>Food Category</Link>
             <ul className="p-2">
                 <li><Link href='/category/1'>Food Category 1</Link></li>
                 <li><Link href='/category/2'>Food Category 2</Link></li>
             </ul>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
         <details className="hidden md:block">
           <summary><Link href='/category'>Food Category</Link></summary>
           <ul className="p-2">
@@ -21,7 +21,7 @@ const Navbar = () => {
                 <li><Link href='/category/2'>Food Category 2</Link></li>
           </ul>
         </details>
-        </li>
+        </li> */}
         <li>
             <Link href='/restaurants'>Restaurants</Link>
         </li>
@@ -31,9 +31,9 @@ const Navbar = () => {
         <li>
             <Link href='/register-restaurant'>Resgister Restaurant</Link>
         </li>
-        <li>
+        {/* <li>
             <Link href='/about'>About</Link>
-        </li>
+        </li> */}
     </>
     return (
         <>
