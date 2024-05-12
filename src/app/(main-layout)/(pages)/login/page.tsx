@@ -1,10 +1,13 @@
 "use client"
 
+import { setToken } from "@/app/_util/token";
 import { getUser, loginUser } from "@/app/lib/user/user";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 
 const LoginPage = () => {
+    const router = useRouter();
     const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
         e?.preventDefault();
         console.log('trying to login...');
@@ -13,8 +16,14 @@ const LoginPage = () => {
         const password = form?.password?.value;
         const res = await loginUser(username, password);
         console.log(res, res?.access_token);
+        setToken(res?.access_token);
         const user = await getUser(res?.access_token);
         console.log(user);
+        if(user?.is_active){
+            router.push('/user-profile');
+        }else{
+            router.push('/verify');
+        }
     }
     return (
         <div className="my-24">

@@ -4,10 +4,12 @@ import { getImageURL } from "@/app/_util/getImageURL";
 import { registerUser } from "@/app/lib/user/user";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 
 
 const SignUpPage = () => {
+    const router = useRouter();
     const [image, setImage] = useState<string>("");
     const handleUserRegistration = async (e: FormEvent<HTMLFormElement>) => {
         e?.preventDefault();
@@ -36,6 +38,7 @@ const SignUpPage = () => {
         }
         const res = await registerUser(userInfo);
         console.log(res);
+        router.push('/verify');
     }
     return (
         <section className="flex flex-col md:flex-row gap-6 my-24 md:mx-auto px-8 md:px-0 w-full md:w-2/3 lg:w-1/2">
