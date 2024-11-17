@@ -9,7 +9,7 @@ export const getOTP = async () => {
             'Authorization': `Bearer ${token}`
         }
     }
-    const res = await fetch(`${baseUrl}/getotp/`, options);
+    const res = await fetch(`${baseUrl}/otp/`, options);
     return res.json();
 }
 
@@ -23,6 +23,6 @@ export const verifyOTP = async (otp: string) => {
         },
         body: JSON.stringify({otp: otp})
     }
-    const res = await fetch(`${baseUrl}/verifyotp/`, options);
+    const res = await fetch(`${baseUrl}/otp/verify/`, options);
     return res.json();
 }

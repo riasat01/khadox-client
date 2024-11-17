@@ -38,7 +38,10 @@ const SignUpPage = () => {
         }
         const res = await registerUser(userInfo);
         console.log(res);
-        router.push('/verify');
+        // const res_t = await loginUser(email, password);
+        // console.log(res_t, res_t?.access_token);
+        // setToken(res?.access_token);
+        router.push('/login');
     }
     return (
         <section className="flex flex-col md:flex-row gap-6 my-24 md:mx-auto px-8 md:px-0 w-full md:w-2/3 lg:w-1/2">

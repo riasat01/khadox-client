@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavButton from "../nav-button/NavButton";
 
 
 const Navbar = () => {
@@ -47,7 +48,7 @@ const Navbar = () => {
                             {navlinks}
                         </ul>
                     </section>
-                    <Link href='/' className="btn btn-ghost text-xl">Khadox</Link>
+                    <Link href='/' className="btn btn-ghost text-xl">Khabar Bilai</Link>
                 </section>
                 <section className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -55,7 +56,8 @@ const Navbar = () => {
                     </ul>
                 </section>
                 <section className="navbar-end">
-                    <Link href='/login' className="btn">Login</Link>
+                    {/* <Link href='/login' className="btn">Login</Link> */}
+                    <NavButton />
                 </section>
             </section>
         </>
